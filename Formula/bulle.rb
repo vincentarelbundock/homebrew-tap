@@ -5,8 +5,8 @@
 class Bulle < Formula
   desc "Run developer tools in a sandbox"
   homepage "https://github.com/vincentarelbundock/bulle"
-  url "https://github.com/vincentarelbundock/bulle/archive/refs/tags/v0.0.3.tar.gz"
-  sha256 "e1a779b310968abc140463ee645c67b521215f3a3e640972de110823a4d2a37d"
+  url "https://github.com/vincentarelbundock/bulle/archive/refs/tags/v0.0.4.tar.gz"
+  sha256 "c506998ebb5bfd23e73d1475743a7e9aaffa0af5b3a737a56a3d97b5e8fd13e1"
   license "MIT"
 
   depends_on "go" => :build
