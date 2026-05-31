@@ -6,7 +6,6 @@ class Bulle < Formula
   desc "Run developer tools in a sandbox"
   homepage "https://github.com/vincentarelbundock/bulle"
   url "https://github.com/vincentarelbundock/bulle/archive/refs/tags/v0.0.1.tar.gz"
-  version "0.0.1"
   sha256 "6b27a43eaf329e8b02463cb10a8705756fa17bdc5401ae272c821c35c38e21cb"
   license "MIT"
 
