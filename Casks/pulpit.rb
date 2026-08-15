@@ -1,0 +1,53 @@
+# Homebrew Cask template for Pulpit.
+#
+# The version and sha256 placeholders below are filled in by the release
+# workflow, which then pushes the rendered file to vincentarelbundock/homebrew-tap as
+# `Casks/pulpit.rb`. Edit this file, never the copy in the tap: the tap's copy
+# is generated output and any hand edit is overwritten by the next release.
+cask "pulpit" do
+  version "0.0.3"
+  sha256 "8bfc3818caafbaa569a4ef3b0e595eeaa9e44b021b1a423a60b38f7915a77ec3"
+
+  url "https://github.com/vincentarelbundock/pulpit/releases/download/v#{version}/pulpit-#{version}-macos-universal.dmg"
+  name "Pulpit"
+  desc "PDF presenter built around connecting and disconnecting displays"
+  homepage "https://github.com/vincentarelbundock/pulpit"
+
+  # Universal: the binary and the bundled libpdfium both carry an arm64 and an
+  # x86_64 slice, so there is no architecture condition to state. The macOS
+  # floor matches LSMinimumSystemVersion in the bundle.
+  depends_on macos: ">= :big_sur"
+
+  # Video and animated images play through libmpv when it is installed, which
+  # the app finds in the Homebrew prefix without configuration. It is a
+  # formula, not a cask, and pulling it in here is why `brew install --cask
+  # pulpit` needs no follow-up step. mpv is not bundled: pulpit dlopens it and
+  # links nothing, which keeps this MIT-or-Apache app clear of mpv's GPL.
+  depends_on formula: "mpv"
+
+  app "Pulpit.app"
+
+  caveats <<~EOS
+    Pulpit is ad-hoc signed but not notarized. Ad-hoc signing is what lets
+    Apple Silicon execute the binary at all; it buys no Gatekeeper relief,
+    and notarization needs a paid Developer ID that no release is gated on.
+
+    The quarantine attribute applies, so the first launch costs one trip
+    through System Settings -> Privacy & Security, where a message about
+    Pulpit offers "Open Anyway". Homebrew removed --no-quarantine in 4.5, so
+    there is no flag that skips it; the approval is needed once, not per
+    upgrade.
+
+    Interactive and web media overlays need a Chromium-family browser —
+    Google Chrome, Chromium, Microsoft Edge or Brave in /Applications.
+    Pulpit drives it headless in a private profile it creates itself; your
+    own browser profile is never touched. Video and animated images use the
+    mpv installed alongside this cask.
+  EOS
+
+  zap trash: [
+    "~/Library/Application Support/pulpit",
+    "~/Library/Caches/pulpit",
+    "~/Library/Logs/pulpit",
+  ]
+end
