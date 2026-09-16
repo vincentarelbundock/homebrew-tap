@@ -5,8 +5,8 @@
 # `Casks/pulpit.rb`. Edit this file, never the copy in the tap: the tap's copy
 # is generated output and any hand edit is overwritten by the next release.
 cask "pulpit" do
-  version "0.0.16"
-  sha256 "69bac56cc7b4fdb29ab6c67d0798a7b32f8634d0dc9bd6d907fc1e6a44f7bb1c"
+  version "0.0.17"
+  sha256 "a25f9d5d7ac45b1e069d8e4dba4b6de85e7fc6c15561b37b7e01e468505504ed"
 
   url "https://github.com/vincentarelbundock/pulpit/releases/download/v#{version}/pulpit-#{version}-macos-universal.dmg"
   name "Pulpit"
