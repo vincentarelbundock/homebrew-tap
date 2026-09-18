@@ -5,8 +5,8 @@
 class Calepin < Formula
   desc "Preprocess Typst documents with executable code chunks"
   homepage "https://github.com/vincentarelbundock/calepin"
-  url "https://github.com/vincentarelbundock/calepin/archive/refs/tags/v0.0.59.tar.gz"
-  sha256 "3761819dcb7b45a1395fc4fdf5950bf34f273d541de1a5bd38154a4015325271"
+  url "https://github.com/vincentarelbundock/calepin/archive/refs/tags/v0.0.60.tar.gz"
+  sha256 "3c09bed882a5a94f823a4a02f95eaecb7d644ec0d884c2a9bda9767f45e1ea56"
   license "MIT"
 
   depends_on "rust" => :build
