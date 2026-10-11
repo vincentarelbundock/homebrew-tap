@@ -5,28 +5,28 @@
 class Librepaper < Formula
   desc "Browser based document collaboration and review companion"
   homepage "https://github.com/LibrePaper/librepaper"
-  version "0.0.33"
+  version "0.0.34"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/LibrePaper/librepaper/releases/download/v0.0.33/librepaper-aarch64-apple-darwin.tar.xz"
-      sha256 "3fe820c400da014403db1e0ae6218abe3a9776adae92267ed3b28f8e76a6ff6f"
+      url "https://github.com/LibrePaper/librepaper/releases/download/v0.0.34/librepaper-aarch64-apple-darwin.tar.xz"
+      sha256 "b528b08e7fe0bc4cd258dfb47406794ff4ec2f2da16fc4ff00aa8bac86666099"
     end
     on_intel do
-      url "https://github.com/LibrePaper/librepaper/releases/download/v0.0.33/librepaper-x86_64-apple-darwin.tar.xz"
-      sha256 "905b75f13c0f97066e655844ef59ebafda49bdcd8bee8230ab71bbdb9d866097"
+      url "https://github.com/LibrePaper/librepaper/releases/download/v0.0.34/librepaper-x86_64-apple-darwin.tar.xz"
+      sha256 "b490989bf395c15e9619cf6ab1c91e354002df62dded6f503a8a79a154a5300c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/LibrePaper/librepaper/releases/download/v0.0.33/librepaper-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "bd2edbfa5f338b70f1e9f63ddf3f95b2ba696ad4df6ce68d3b2c1b45b0c16ddc"
+      url "https://github.com/LibrePaper/librepaper/releases/download/v0.0.34/librepaper-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "3747739c34887acc2cb42384f34940758665c5baeb5fbf81eee5bb51390e16a2"
     end
     on_intel do
-      url "https://github.com/LibrePaper/librepaper/releases/download/v0.0.33/librepaper-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "4c2f72ea80a037b417399b51cee868af18cd15353352a4dd6567f37fe4829fbe"
+      url "https://github.com/LibrePaper/librepaper/releases/download/v0.0.34/librepaper-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "79c8aba377614c31f5b385766f119eb6c021f4312721163355d0e159aa2989d3"
     end
   end
 
